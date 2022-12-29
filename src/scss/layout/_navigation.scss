@@ -9,6 +9,12 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @include breakpoints(md) {
+            justify-content: none;
+            width: fit-content;
+            margin-left: 40px;
+        }
     }
 
     .menu-principal {
@@ -21,30 +27,56 @@
         border-radius: 0 0 50vw 50vw;
         z-index: 30;
 
+        @include breakpoints(md) {
+            position: relative;
+            top: 0;
+            padding: 0px;
+            border-radius: 0;
+            background-color: transparent;
+        }
+
         &-logo {
             position: absolute;
             left: 50%;
             top: 80%;
             transform-origin: center;
             transform: translate(-50%, -50%);
+
+            @include breakpoints(md) {
+                display: none;
+            }
         }
 
         .menu {
             padding-left: $h-menu-mobile;
             padding-top: calc($h-menu-mobile / 2);
 
+            @include breakpoints(md) {
+                padding: 0;
+            }
+
             ul {
                 padding: 0;
-
+                @include breakpoints(md) {
+                   display: flex;
+                   justify-content: space-around;
+                }
                 li {
                     list-style: none;
                     margin-bottom: 20px;
+                    @include breakpoints(md) {
+                        margin-bottom: 0px;
+                    }
 
                     a {
                         color: white;
                         text-decoration: none;
                         font-size: 20pt;
                         text-transform: uppercase;
+
+                        @include breakpoints(md) {
+                            color: $dark-green;
+                        }
                     }
                 }
             }
@@ -63,6 +95,10 @@
     min-width: $h-menu-mobile;
     min-height: $h-menu-mobile;
     justify-content: center;
+
+    @include breakpoints(md) {
+        display: none;
+    }
 
     &:hover {
         cursor: pointer;
