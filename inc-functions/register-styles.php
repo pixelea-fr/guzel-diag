@@ -20,5 +20,5 @@ function guzeldiag_admin_styles() {
 // Enqueue Block Editor styles
 add_action('enqueue_block_editor_assets', 'guzeldiag_editor_styles');
 function guzeldiag_editor_styles() {
-    wp_enqueue_style('guzeldiag-editor-styles', get_template_directory_uri() . '/editor.css', array('wp-edit-blocks'));
+    wp_enqueue_style('guzeldiag-editor-styles', get_template_directory_uri() . '/dist/css/editor-style.css', array('wp-edit-blocks'));
 }

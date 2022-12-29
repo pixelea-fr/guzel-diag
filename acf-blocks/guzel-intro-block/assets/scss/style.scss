@@ -1,0 +1,18 @@
+@import "../../../../acf-blocks-common/all.scss";
+
+.intro {
+    height: 300px;
+
+    .red {
+        background-color: red;
+        width: 300px;
+        height: 300px;
+    }
+
+    .blue {
+        background-color: blue;
+        width: 300px;
+        height: 300px;
+
+    }
+}
