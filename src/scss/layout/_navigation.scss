@@ -3,6 +3,9 @@
     align-items: center;
     background-color: $cream;
     box-shadow: 0 1px 10px rgba($black, 30%);
+    @include breakpoints(md) {
+        justify-content: space-between;
+    }
 
     .custom-logo-link {
         width: 100%;
@@ -33,6 +36,7 @@
             padding: 0px;
             border-radius: 0;
             background-color: transparent;
+            max-width: 60vw;
         }
 
         &-logo {
