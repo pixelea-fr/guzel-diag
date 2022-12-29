@@ -1,26 +1,86 @@
+.main-navigation {
+    display: flex;
+    align-items: center;
+    background-color: $cream;
+    box-shadow: 0 1px 10px rgba($black, 30%);
+
+    .custom-logo-link {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .menu-principal {
+        width: 100%;
+        transition: top 0.5s ease-in-out;
+        position: absolute;
+        top: -600px;
+        background-color: $green;
+        padding-bottom: 25vh;
+        border-radius: 0 0 50vw 50vw;
+        z-index: 30;
+
+        &-logo {
+            position: absolute;
+            left: 50%;
+            top: 80%;
+            transform-origin: center;
+            transform: translate(-50%, -50%);
+        }
+
+        .menu {
+            padding-left: $h-menu-mobile;
+            padding-top: calc($h-menu-mobile / 2);
+
+            ul {
+                padding: 0;
+
+                li {
+                    list-style: none;
+                    margin-bottom: 20px;
+
+                    a {
+                        color: white;
+                        text-decoration: none;
+                        font-size: 20pt;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+    }
+}
+
 // Hamburger menu
 .menu-toggle {
     display: flex;
     align-items: center;
-    background-color: transparent;
+    background-color: $green;
     border: none;
     line-height: 1;
+    z-index: 40;
+    min-width: $h-menu-mobile;
+    min-height: $h-menu-mobile;
+    justify-content: center;
+
     &:hover {
         cursor: pointer;
     }
+
     span,
     span::before,
     span::after {
-        width: 1.125rem;
-        border-radius: 0.125rem;
-        background-color: $black;
-        transition: .5s cubic-bezier(.19,1,.22,1);
+        width: 42px;
+        background-color: $white;
+        transition: .5s cubic-bezier(.19, 1, .22, 1);
     }
+
     span {
         display: block;
         position: relative;
-        height: .125rem;
-        margin-left: .2rem;
+        height: 4px;
+
         &::before,
         &::after {
             content: "";
@@ -30,18 +90,23 @@
             top: 0;
             left: 0;
         }
+
         &::before {
-            transform: translateY(-0.3125rem);
+            transform: translateY(-13px);
+
             .header--menu-is-open & {
-                transform: rotate(-135deg);
+                transform: rotate(45deg);
             }
         }
+
         &::after {
-            transform: translateY(0.3125rem);
+            transform: translateY(13px);
+
             .header--menu-is-open & {
-                transform: rotate(135deg);
+                transform: rotate(-45deg);
             }
         }
+
         .header--menu-is-open & {
             background-color: transparent;
         }
