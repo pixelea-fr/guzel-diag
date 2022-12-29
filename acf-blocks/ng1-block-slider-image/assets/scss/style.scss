@@ -1,0 +1,27 @@
+@import "../../../../acf-blocks-common/all.scss";
+
+.slider-image {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    .slick-track{
+        display: flex;
+        align-items: center;
+    }
+    li {
+        margin: 0 15px;
+        max-width: 100%;
+
+        img {
+            border-radius: 30px;
+            max-width: 450px;
+            margin: auto;
+            width: 80%;
+            object-fit: cover;
+            object-position: center center;
+            @include breakpoints(mm){
+                width: 100%;
+            }
+        }
+    }
+}
