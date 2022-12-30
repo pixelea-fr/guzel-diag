@@ -1,18 +1,158 @@
 @import "../../../../acf-blocks-common/all.scss";
 
 .intro {
-    height: 300px;
+    padding: 50px 0 50px 0;
+    background-image: url('../../../../dist/img/bg_intro.svg');
+    background-repeat: no-repeat;
+    $bg-size : 70vw;
+    background-size: $bg-size $bg-size;
+    background-position: calc($bg-size/-2) calc($bg-size/-2);
 
-    .red {
-        background-color: red;
-        width: 300px;
-        height: 300px;
-    }
+    &-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-    .blue {
-        background-color: blue;
-        width: 300px;
-        height: 300px;
+        @include breakpoints (sm) {
+            display: grid;
+            max-width: 70%;
+            margin: auto;
+            align-items: end;
+            justify-items: end;
+        }
+
+        .certification {
+            background-color: $orange;
+            color: $white;
+            display: flex;
+            align-items: center;
+            position: absolute;
+            padding-left: 70px;
+            top: 15px;
+            left: -30px;
+            border-radius: 30px;
+            font-size: 15px;
+            @include breakpoints(xsm){
+                font-size: 25px;
+            }
+            @include breakpoints(mm){
+                top: 15vh;
+            }
+            div{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 30px;
+                @include breakpoints(xsm){
+                    height: 50px;
+                }
+                img {
+                    width: auto;
+                    height: 100%;
+                    padding: 2px 30px 2px 20px;
+                }
+            }
+        }
+
+        .photo {
+            max-width: 50%;
+            display: flex;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+
+            @include breakpoints (sm) {
+                grid-column: 1;
+                max-width: 300px;
+                margin-right: -35px;
+                z-index: 2;
+                position: relative;
+                width: max-content;
+            }
+        }
+
+        &-sub {
+            width: 100%;
+
+            @include breakpoints(sm) {
+                grid-column: 2;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: flex-start;
+                margin-left: -15px;
+
+                >.home,
+                p {
+                    margin-left: 50px;
+                }
+            }
+
+            .button-container {
+                display: flex;
+                position: fixed;
+                flex-direction: column;
+                gap: 10px;
+                top: 15vh;
+                right: -20px;
+
+                button {
+                    min-width: 0px;
+                    padding: 10px 30px;
+                }
+
+                @include breakpoints(sm) {
+                    position: relative;
+                    top: 0;
+                    right: 0;
+                    flex-direction: row;
+                    gap: 30px;
+                    margin: 20px 0 20px 50px;
+
+                    button {
+                        min-width: 160px;
+                        padding: 10px 50px;
+                    }
+                }
+            }
+
+            .descrip {
+                margin: 20px 0 20px 0;
+                background-image: url('../../../../dist/img/descrp_intro.svg');
+                padding: 34px 34px 34px 10px;
+                color: $dark-green;
+                height: auto;
+                width: 100%;
+                background-size: auto 100%;
+                background-position-x: 100%;
+                background-repeat: no-repeat;
+
+                @include breakpoints(xxsm) {
+                    background-size: contain;
+                    background-position-x: 0%;
+                }
+
+                @include breakpoints(sm) {
+                    margin-bottom: 0;
+                    background-size: auto 100%;
+                    background-position-x: 100%;
+                    max-width: 450px;
+                    padding: 34px 34px 34px 0px;
+                }
+
+                p {
+                    max-width: 370px;
+
+                }
+
+                strong {
+                    color: $green;
+                    font-weight: normal;
+                }
+            }
+        }
 
     }
 }

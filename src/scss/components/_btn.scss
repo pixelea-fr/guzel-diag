@@ -1,3 +1,14 @@
-button {
-    color: purple;
+button.cta{
+    padding: 10px 50px;
+    background-color: $green;
+    border-radius: 30px;
+    border: solid transparent 0px;
+    min-width: 160px;
+    a{
+        color: $white;
+        text-decoration: none;
+    }
+    &:hover{
+        background-color: $dark-green;
+    }
 }

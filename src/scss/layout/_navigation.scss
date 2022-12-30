@@ -3,6 +3,8 @@
     align-items: center;
     background-color: $cream;
     box-shadow: 0 1px 10px rgba($black, 30%);
+    position: relative;
+    z-index: 9;
     @include breakpoints(md) {
         justify-content: space-between;
     }
@@ -28,7 +30,7 @@
         background-color: $green;
         padding-bottom: 25vh;
         border-radius: 0 0 50vw 50vw;
-        z-index: 30;
+        z-index: 9;
 
         @include breakpoints(md) {
             position: relative;
@@ -95,7 +97,7 @@
     background-color: $green;
     border: none;
     line-height: 1;
-    z-index: 40;
+    z-index: 10;
     min-width: $h-menu-mobile;
     min-height: $h-menu-mobile;
     justify-content: center;
