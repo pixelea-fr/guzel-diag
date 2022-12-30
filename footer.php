@@ -1,4 +1,4 @@
-		<a href="#masthead" class="back-top">Haut de page</a>
+		<a href="#masthead" class="back-top"><span></span></a>
 	</main><!-- /#main-content -->
 <footer role="contentinfo">
 	<div class="bottom-bar">
