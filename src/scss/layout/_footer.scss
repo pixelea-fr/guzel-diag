@@ -1,0 +1,14 @@
+footer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    color: $white;
+    background: $dark-green;
+    height: 40px;
+    padding-left: 40px;
+
+    @include breakpoints(sm) {
+        height: 80px;
+    }
+}
