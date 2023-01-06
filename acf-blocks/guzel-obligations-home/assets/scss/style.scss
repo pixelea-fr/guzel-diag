@@ -1,0 +1,39 @@
+@import "../../../../acf-blocks-common/all.scss";
+
+.obligation-home{
+    &-list{
+        display: flex;
+        justify-content: space-around;
+        .item{
+            background-color: $dark-green;
+            width: 140px;
+            
+            border-top-left-radius: 120px;
+            border-top-right-radius: 120px;
+            display: flex;
+            flex-direction: column;
+            p{
+                text-align: left;
+                color: $white;
+                font-size: 20px;
+                position: relative;
+                top: 20px;
+                margin-top: 10px;
+            }
+            .btt{
+                background-color: $green;
+                color: $white;
+                width: 100%;
+                padding: 10px 0;
+                border-radius: 30px;
+                text-align: center;
+                text-decoration: none;
+                position: relative;
+                top: 20px;
+                &:hover{
+                    background-color: $dark-green;
+                }
+            }
+        }
+    }
+}
