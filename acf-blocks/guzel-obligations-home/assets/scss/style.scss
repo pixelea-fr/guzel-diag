@@ -1,24 +1,43 @@
 @import "../../../../acf-blocks-common/all.scss";
 
 .obligation-home{
+    background-image: url('../../../../dist/img/bg_obli_home_mobile.svg');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    @include breakpoints(sm){
+        background-image: url('../../../../dist/img/bg_obli_home.svg');
+    }
     &-list{
+        max-width: 1200px;
+        margin: auto;
         display: flex;
-        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+        @include breakpoints(xsm){
+            flex-direction: row;
+            justify-content: space-around;
+        }
         .item{
             background-color: $dark-green;
-            width: 140px;
-            
+            width: 160px;
             border-top-left-radius: 120px;
             border-top-right-radius: 120px;
             display: flex;
             flex-direction: column;
+            margin-bottom: 11vh;
             p{
                 text-align: left;
                 color: $white;
-                font-size: 20px;
+                font-size: 23px;
                 position: relative;
                 top: 20px;
                 margin-top: 10px;
+                padding: 5px 10px 0px;
+                strong{
+                    color: $green;
+                    font-weight: 100;
+                }
             }
             .btt{
                 background-color: $green;
