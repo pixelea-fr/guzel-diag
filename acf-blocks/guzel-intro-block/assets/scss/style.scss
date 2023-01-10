@@ -7,6 +7,7 @@
     $bg-size : 70vw;
     background-size: $bg-size $bg-size;
     background-position: calc($bg-size/-2) calc($bg-size/-2);
+    overflow: hidden;
 
     &-grid {
         display: flex;
@@ -96,12 +97,19 @@
                 flex-direction: column;
                 gap: 10px;
                 top: 15vh;
-                right: -20px;
+                right: 0;
                 z-index: 1;
+                transition: all 0.5s ease-in-out;
+                &.hide{
+                    right: -100%;
+                }
 
                 button {
                     min-width: 0px;
-                    padding: 10px 30px;
+                    padding: 10px 10vw;
+                    border-top-right-radius: 0;
+                    border-bottom-right-radius: 0;
+
                 }
 
                 @include breakpoints(sm) {

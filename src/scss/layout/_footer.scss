@@ -1,3 +1,110 @@
+.pre-footer {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 40% 60%;
+    background-image: url('../../dist/img/background_footer.svg');
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position-x: 10%;
+    background-position-y: bottom;
+
+    @include breakpoints(sm) {
+        background-size: contain;
+        background-position-x: 30%;
+        grid-template-columns: 50% 50%;
+
+    }
+
+    .presentation {
+        grid-column: 1;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .photo {
+            max-width: 100%;
+
+            img {
+                width: auto;
+                height: 170px;
+                margin-left: -130px;
+
+                @include breakpoints(sm) {
+                    width: 70%;
+                    height: auto;
+                    margin-left: 0px;
+                }
+            }
+        }
+
+        .certification {
+            background-color: $orange;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding-left: 10%;
+            top: 15px;
+            border-radius: 30px;
+            border-bottom-left-radius: 0;
+            border-top-left-radius: 0;
+            font-size: 15px;
+            width: fit-content;
+
+            div {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 30px;
+
+                @include breakpoints(xsm) {
+                    height: 50px;
+                }
+
+                img {
+                    width: auto;
+                    height: 100%;
+                    padding: 2px 30px 2px 20px;
+                }
+            }
+        }
+    }
+
+    .formulaire {
+        grid-column: 2;
+        width: 100%;
+        padding: 0px 10px;
+
+        h2 {
+            text-align: left;
+        }
+
+        form {
+            max-width: 100%;
+        }
+
+        p {
+            width: 100%;
+
+            span {
+                width: 100%;
+            }
+
+            input,
+            textarea {
+                max-width: 500px;
+                width: 100%;
+
+                &[type=submit] {
+                    padding: 10px 40px;
+                }
+            }
+            &:last-of-type{
+                align-items: flex-start;
+            }
+        }
+    }
+}
+
 footer {
     display: flex;
     justify-content: flex-start;
@@ -12,6 +119,7 @@ footer {
         height: 80px;
     }
 }
+
 .back-top {
     position: fixed;
     bottom: 50px;
@@ -19,10 +127,17 @@ footer {
     background-color: $green;
     padding: 10px;
     display: flex;
+    border: 2px $cream solid;
     border-radius: 10px;
-    &:hover{
+    transition: all 0.5s ease-in-out;
+    &.hide{
+        bottom: -100%;
+    }
+
+    &:hover {
         background-color: $orange;
     }
+
     span {
         background-image: url('../img/chevron-up.svg');
         width: 30px;

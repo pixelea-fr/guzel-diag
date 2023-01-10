@@ -5,4 +5,12 @@ body {
         position: relative;
         z-index: 1;
     }
+    &.page-template-default {
+        background-image: url('../../dist/img/bg_diags-Mobile.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    &.home{
+        background-image: none;
+    }
 }

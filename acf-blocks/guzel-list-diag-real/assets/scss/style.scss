@@ -1,0 +1,149 @@
+@import "../../../../acf-blocks-common/all.scss";
+
+.list_diag_real {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+
+    .diag {
+        display: flex;
+        flex-direction: column;
+        padding-top: 77px;
+
+        &-obli {
+            background-color: $white;
+            color: $orange;
+            border-radius: 700px; //cheat code
+            border-start-start-radius: 0;
+            border-end-start-radius: 0;
+            padding: 20px;
+            width: fit-content;
+            border: 1px $dark-green solid;
+            max-width: 800px;
+            border-left: none;
+
+            strong {
+                color: $green;
+                font-weight: normal;
+            }
+
+            @include breakpoints(sm) {
+                p {
+                    margin-left: 200px;
+                }
+            }
+        }
+
+        &-desc {
+            background-color: rgba($green, 20%);
+            color: $orange;
+            border-radius: 0px;
+            width: fit-content;
+            margin-bottom: 30px;
+            max-width: 1000px;
+            padding: 20px;
+
+            strong {
+                color: $dark-green;
+                font-weight: normal;
+            }
+
+            @include breakpoints(sm) {
+                padding: 20px 80px 20px 20px;
+                border-radius: 700px;
+                border-start-start-radius: 0;
+                border-end-start-radius: 0;
+
+                p {
+                    margin-left: 200px;
+                }
+            }
+        }
+
+        &-risque {
+            background-color: $dark-green;
+            color: $white;
+            border-radius: 700px;
+            border-start-end-radius: 0;
+            border-end-end-radius: 0;
+            align-self: flex-end;
+            padding: 20px;
+            font-size: 20px;
+            width: 300px;
+
+            @include breakpoints(sm) {
+                font-size: 22px;
+                width: 500px;
+
+            }
+
+            p {
+                margin-right: 10%;
+
+                @include breakpoints(sm) {
+                    margin-right: 20%;
+                }
+            }
+        }
+
+        &-text-risque {
+            background-color: $dark-green;
+            color: $white;
+            border-radius: 0px;
+            align-self: flex-end;
+            padding: 20px;
+            min-width: 100%;
+
+            strong {
+                color: $orange;
+                font-weight: normal;
+            }
+
+            @include breakpoints(sm) {
+                padding: 20px 20px 20px 80px;
+                border-radius: 700px;
+                min-width: 0%;
+                border-start-end-radius: 0;
+                border-end-end-radius: 0;
+                max-width: 800px;
+                p{
+                    margin-right: 200px;
+                }
+            }
+        }
+
+        &-alert {
+            margin-top: 30px;
+            background-color: $white;
+            color: $orange;
+            border-radius: 700px;
+            border-start-start-radius: 0;
+            border-end-start-radius: 0;
+            padding: 20px;
+            width: fit-content;
+            max-width: 1000px;
+
+            @include breakpoints(sm) {
+                font-size: 22px;
+            }
+
+            p {
+                margin-left: 10%;
+
+                @include breakpoints(sm) {
+                    margin-left: 200px;
+                }
+            }
+        }
+
+        .btt {
+            &.devis {
+                padding: 10px 20px;
+                justify-content: center;
+                display: flex;
+                width: fit-content;
+                margin: 30px auto;
+            }
+        }
+    }
+}

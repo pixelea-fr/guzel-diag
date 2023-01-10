@@ -1,0 +1,109 @@
+@import "../../../../acf-blocks-common/all.scss";
+
+.article-list {
+    padding: 20px 0;
+    background-image: url('../../../../dist/img/bg_diag_mobile.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: right;
+    background-position-y: center;
+
+    @include breakpoints(sm) {
+        background-image: url('../../../../dist/img/bg_diag_web.svg');
+    }
+}
+
+.diag_real {
+    .btt{
+        &.devis{
+            padding: 10px 20px;
+            font-size: 20px;
+            margin: 30px auto;
+            display: flex;
+            width: fit-content;
+        }
+    }
+    .diag {
+        &-title {
+            padding: 20px 40px;
+            background-color: lighten($green, 30%);
+            color: $orange;
+            font-size: 30px;
+            display: inline-flex;
+            align-items: center;
+            z-index: 2;
+            border-top-right-radius: 700px;
+            border-bottom-right-radius: 700px;
+            cursor: pointer;
+
+            .icon-plus {
+                background: url('../../../../dist/img/plus.svg') no-repeat;
+                background-size: 28px 28px;
+                display: inline-block;
+                height: 28px;
+                width: 28px;
+                margin-left: 10px;
+                transition: all 0.2s ease-in-out;
+
+            }
+        }
+
+        &-desc {
+            position: relative;
+            left: -100%;
+            overflow: hidden;
+            z-index: 1;
+            opacity: 0%;
+            background-color: $cream;
+            height: 0px;
+            max-width: 500px;
+            display: grid;
+            align-items: center;
+            transition: all 0.2s ease-in-out;
+            @include breakpoints(mm){
+                max-width: 50%;
+            }
+            @include breakpoints(md){
+                max-width: 40%;
+            }
+
+            p {
+                grid-column: 1;
+                max-width: 90%;
+                color: $orange;
+            }
+
+            .btt {
+                grid-column: 1;
+                grid-row-start: 4;
+                grid-row-end: 4;
+                padding: 10px 30px;
+                width: fit-content;
+                margin: auto;
+
+                @include breakpoints(xsm) {
+                    grid-column: 2;
+                    grid-row-start: 1;
+                }
+            }
+
+        }
+
+        &.visible {
+            .diag-desc {
+                left: 0%;
+                opacity: 100%;
+                height: 100%;
+                border: 1px $dark-green solid;
+                border-top-right-radius: 700px;
+                border-bottom-right-radius: 700px;
+                padding: 10px 40px;
+                border-left: none;
+            }
+
+            .icon-plus {
+                transform: rotate(45deg);
+            }
+        }
+    }
+}

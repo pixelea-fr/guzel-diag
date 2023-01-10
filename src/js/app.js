@@ -8,8 +8,15 @@
         // Do things...
     });
 
-    $(window).scroll(function(){
-        // Do things...
-    });
+    $(document).ready(function () {
+		$(window).scroll(function () {
+			if($(document).scrollTop() < 700){
+				$('.back-top').addClass('hide');
+			}
+			else{
+				$('.back-top').removeClass('hide');
+			}
+		});
+	});
 
 }( jQuery ) );

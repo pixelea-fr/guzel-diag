@@ -17,7 +17,7 @@
 ?>
 <section class="obligation-home">
     <h3><?= $titre; ?></h3>
-    <p class="sous-titre"><?= $texte_intro; ?></p>
+    <span class="sous-titre"><?= $texte_intro; ?></span>
     <div class="obligation-home-list">
         <?php foreach ($type_de_vente as $item) : ?>
             <?php extract($item); ?>

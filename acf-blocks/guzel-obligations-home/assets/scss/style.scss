@@ -40,18 +40,8 @@
                 }
             }
             .btt{
-                background-color: $green;
-                color: $white;
-                width: 100%;
-                padding: 10px 0;
-                border-radius: 30px;
-                text-align: center;
-                text-decoration: none;
                 position: relative;
                 top: 20px;
-                &:hover{
-                    background-color: $dark-green;
-                }
             }
         }
     }
