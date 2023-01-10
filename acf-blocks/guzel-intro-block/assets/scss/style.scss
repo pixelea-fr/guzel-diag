@@ -33,20 +33,25 @@
             left: -30px;
             border-radius: 30px;
             font-size: 15px;
-            @include breakpoints(xsm){
+
+            @include breakpoints(xsm) {
                 font-size: 25px;
             }
-            @include breakpoints(mm){
+
+            @include breakpoints(mm) {
                 top: 15vh;
             }
-            div{
+
+            div {
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 height: 30px;
-                @include breakpoints(xsm){
+
+                @include breakpoints(xsm) {
                     height: 50px;
                 }
+
                 img {
                     width: auto;
                     height: 100%;
@@ -100,7 +105,8 @@
                 right: 0;
                 z-index: 1;
                 transition: all 0.5s ease-in-out;
-                &.hide{
+
+                &.hide {
                     right: -100%;
                 }
 
@@ -109,6 +115,11 @@
                     padding: 10px 10vw;
                     border-top-right-radius: 0;
                     border-bottom-right-radius: 0;
+
+                    @include breakpoints(sm) {
+                        border-top-right-radius: 30px;
+                        border-bottom-right-radius: 30px;
+                    }
 
                 }
 
