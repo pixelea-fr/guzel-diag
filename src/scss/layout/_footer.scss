@@ -131,6 +131,7 @@ footer {
     border: 2px $cream solid;
     border-radius: 10px;
     transition: all 0.5s ease-in-out;
+    z-index: 2;
     &.hide{
         bottom: -100%;
     }

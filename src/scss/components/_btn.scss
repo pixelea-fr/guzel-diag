@@ -12,3 +12,22 @@ button.cta{
         background-color: $dark-green;
     }
 }
+.btt {
+    background-color: $green;
+    color: $white;
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 30px;
+    text-align: center;
+    text-decoration: none;
+
+    &:visited {
+        color: $white;
+    }
+
+    ;
+
+    &:hover {
+        background-color: $dark-green;
+    }
+}

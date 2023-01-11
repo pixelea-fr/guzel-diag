@@ -1,0 +1,15 @@
+@import "../../../../acf-blocks-common/all.scss";
+
+.devis{
+    margin: 0;
+    padding: 0px;
+    padding-top: 80px;
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: none;
+    form{
+        h3{
+            align-self: flex-start;
+        }
+    }
+}

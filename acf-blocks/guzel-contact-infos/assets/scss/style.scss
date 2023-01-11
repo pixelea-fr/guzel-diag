@@ -1,0 +1,33 @@
+@import "../../../../acf-blocks-common/all.scss";
+
+.contact-infos{
+    margin: 0;
+    padding: 0px;
+    padding-top: 80px;
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: none;
+    .contact{
+        display: flex;
+        flex-direction: column;
+        color: $dark-green;
+        padding-left: 20%;
+        font-size: 20px;
+        .name{
+            font-size: 25px;
+        }
+        .titre{
+            color: $green;
+            margin-bottom: 20px;
+        }
+        .adress{
+            margin-bottom: 20px;
+        }
+        .phone, .email{
+            a{
+                color: $orange;
+                text-decoration: none;
+            }
+        }
+    }
+}

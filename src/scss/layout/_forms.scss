@@ -1,0 +1,123 @@
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+        color: $dark-green;
+
+        input,
+        textarea,
+        select {
+            border: solid 1px $green;
+            min-height: 40px;
+            margin-bottom: 20px;
+            max-width: 300px;
+
+            @include breakpoints(md) {
+                max-width: 500px;
+            }
+
+            &::placeholder {
+                padding-left: 10px;
+                color: $dark-green;
+            }
+
+            &[type="submit"] {
+                background-color: $green;
+                padding: 10px 100px;
+                border-radius: 30px;
+                margin: 30px 0;
+                color: $white;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $dark-green;
+                }
+            }
+        }
+
+        select {
+            min-width: 100%;
+            color: $dark-green;
+            padding: 0 10px;
+            background-color: $white;
+            border-radius: none;
+        }
+
+        .wpcf7-checkbox {
+            display: flex;
+
+            .wpcf7-list-item {
+                margin: 0 10px;
+                display: flex;
+                align-items: center;
+                color: $orange;
+
+                input {
+                    margin-right: 10px;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    .desc-bien {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 30px;
+
+        p {
+            width: 100%;
+            align-self: center;
+
+            .wpcf7-checkbox {
+                justify-content: center;
+            }
+        }
+
+        div {
+            width: 45%;
+        }
+    }
+
+    .check_multi {
+        margin: 30px;
+
+        .wpcf7-checkbox {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            @include breakpoints(sm) {
+                grid-template-columns: 1fr 1fr 1fr;
+
+            }
+        }
+    }
+
+    .rgpd {
+        max-width: 300px;
+
+        @include breakpoints(sm) {
+            max-width: 400px;
+        }
+
+        input {
+            min-width: 15px;
+        }
+    }
+
+    .wpcf7-form-control {
+
+        &.has-spinner {
+            display: flex;
+            flex-direction: column;
+        }
+        .wpcf7-spinner{
+            margin: auto;
+
+        }
+    }
+}

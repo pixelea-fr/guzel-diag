@@ -1,0 +1,42 @@
+@import "../../../../acf-blocks-common/all.scss";
+
+.obligation-texte{
+    margin: 0;
+    padding: 0px;
+    padding-top: 80px;
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: none;
+    .description{
+        width: 100%;
+        background-color: rgba($green, 20%);
+        padding: 20px 20px;
+        @include breakpoints(sm){
+            padding: 20px 20%;
+        }
+        p{
+            color: $dark-green;
+            strong{
+                color: $orange;
+                font-weight: normal;
+            }
+        }
+    }
+    .alert{
+        margin-top: 30px;
+        background-color: $white;
+        color: $orange;
+        border-radius: 700px;
+        border-start-start-radius: 0;
+        border-end-start-radius: 0;
+        padding: 20px;
+        width: fit-content;
+        max-width: 1000px;
+        padding-left: 10%;
+
+        @include breakpoints(sm) {
+            font-size: 22px;
+            padding-left: 200px;
+        }
+    }
+}

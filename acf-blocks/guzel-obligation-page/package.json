@@ -1,0 +1,15 @@
+{
+    "name": "diag-real-complete-block",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "dev": "sass --watch --update --style=expanded assets/scss:assets/css",
+      "sass-prod": "sass --no-source-map --style=compressed assets/scss:assets/css",
+      "prefixer": "postcss --use autoprefixer -o \"assets/css/style.css\" \"assets/css/style.css\"",
+      "prod":"npm run sass-prod && npm run prefixer"
+    },
+    "author": "",
+    "license": "ISC"
+  }
+  
