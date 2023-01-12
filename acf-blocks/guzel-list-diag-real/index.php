@@ -21,8 +21,6 @@
         $args = array(
             'post_type' => 'Diagnostics',
             'post_status' => 'publish',
-            'orderby' => 'ID',
-            'order'   => 'ASC',
         );
 
         $diags_list = new WP_Query($args);

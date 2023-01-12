@@ -85,9 +85,11 @@
 
         p {
             width: 100%;
-
             span {
                 width: 100%;
+                &.wpcf7-spinner{
+                    width: 24px;
+                }
             }
 
             input,
@@ -97,10 +99,9 @@
 
                 &[type=submit] {
                     padding: 10px 40px;
+                    max-width: 300px;
+                    align-items: center;
                 }
-            }
-            &:last-of-type{
-                align-items: flex-start;
             }
         }
     }
