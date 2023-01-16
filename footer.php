@@ -7,7 +7,7 @@
 			<div class="presentation">
 				<span class="photo"><?= wp_get_attachment_image($photo, 'full'); ?></span>
 				<span class="certification">
-					<div><?= wp_get_attachment_image($certification, $size); ?></div>
+					<div><?= wp_get_attachment_image($certification, 'large'); ?></div>
 				</span>
 			</div>
 			<div class="formulaire">
