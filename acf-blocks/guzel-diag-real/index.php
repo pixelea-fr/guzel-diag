@@ -28,7 +28,7 @@
         $diags_list = new WP_Query($args);
 
         while ($diags_list->have_posts()) : $diags_list->the_post(); ?>
-            <article class="diag">
+            <article class="diag visible">
                 <span class="diag-title"><?= the_title(); ?><span class="icon-plus"></span></span>
                 <? $fields = get_fields(get_the_ID());
                 extract($fields); ?>
