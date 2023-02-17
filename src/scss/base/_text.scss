@@ -80,6 +80,10 @@ span {
     &.sous-titre {
         text-align: center;
         color: $dark-green;
+        max-width: 900px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
 
         p {
             margin: 40px 0;
