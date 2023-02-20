@@ -18,10 +18,21 @@
 <div class="intro">
     <div class="intro-grid">
         <?php
-                $size = 'full';
+        $size = 'full';
         if ($certification) { ?>
             <span class="certification">
                 Certifié <div><?= wp_get_attachment_image($certification, $size); ?></div>
+            </span>
+            <span class="top-contact">
+                Contactez-moi :
+                <p class="adress"><? the_field('adresse', 'option'); ?></p>
+                <p class="phone">Téléphone : <a href="tel:<? the_field('telephone', 'option'); ?>"><? the_field('telephone', 'option') ?></a></p>
+                <p class="email">E-mail : <a href="mailto:<? the_field('email', 'option'); ?>"><? the_field('email', 'option'); ?></a></p>
+            </span>
+        <? }
+        if ($geo) { ?>
+            <span class="zone-geo">
+                <div><?= $geo; ?></div>
             </span>
         <? }
         if ($photo) { ?>
