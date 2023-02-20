@@ -1,4 +1,4 @@
-		<a href="#page" class="back-top hide"><span></span></a>
+		<a href="#page" alt="back-top" class="back-top hide"><span></span></a>
 		</main><!-- /#main-content -->
 		<? $fields = get_fields('option');
 		extract($fields); ?>
