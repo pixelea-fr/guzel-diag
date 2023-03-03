@@ -16,7 +16,6 @@
 
         @include breakpoints (sm) {
             display: grid;
-            max-width: 70%;
             margin: auto;
             align-items: end;
             justify-items: end;
@@ -67,24 +66,20 @@
             color: $white;
             display: flex;
             flex-direction: column;
-            position: absolute;
+            position: relative;
+            padding: 10px;
             padding-left: 70px;
             padding-right: 40px;
-            left: -100%;
+            width: 100%;
             border-top-right-radius: 80px;
             border-bottom-right-radius: 80px;
             font-size: 15px;
 
-            @include breakpoints(xsm) {
-                top: 6.5vh;
-                left: -30px;
-
-            }
-
             @include breakpoints(mm) {
+                position: absolute;
+                max-width: 400px;
                 top: 22vh;
                 left: -30px;
-
             }
 
             a {
@@ -97,11 +92,12 @@
             color: #fff;
             display: flex;
             flex-direction: column;
-            position: absolute;
+            position: relative;
             padding-left: 70px;
             padding-right: 40px;
+            width: 100%;
             right: 0%;
-            top: -100%;
+            margin: 30px 0px;
             border-top-left-radius: 160px;
             border-bottom-left-radius: 160px;
             font-size: 15px;
@@ -110,13 +106,14 @@
             background-size: 690px;
             background-position: -130px 65px;
             min-height: 230px;
-            max-width: 400px;
 
             div {
                 margin-top: 30px;
             }
 
-            @include breakpoints(lg) {
+            @include breakpoints(mm) {
+                position: absolute;
+                max-width: 400px;
                 display: block;
                 top: 15vh;
             }
